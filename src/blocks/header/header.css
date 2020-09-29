@@ -1,4 +1,7 @@
 @import url('./__logo/header__logo.css');
+@import url('./__controlbar/header__controlbar.css');
+@import url('../navigation/navigation.css');
+@import url('./__button/header__button.css');
 
 .header {
   max-width: 1440px;
@@ -9,4 +12,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
 }

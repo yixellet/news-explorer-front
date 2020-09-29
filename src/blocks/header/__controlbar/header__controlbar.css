@@ -1,0 +1,10 @@
+.header__controlbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto Regular";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  height: 100%;
+}

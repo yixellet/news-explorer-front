@@ -1,0 +1,12 @@
+.navigation__item {
+  list-style-type: none;
+  margin-left: 32px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__item_active {
+  border-bottom: 1px #fff solid;
+}
