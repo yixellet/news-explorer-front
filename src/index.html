@@ -2,11 +2,73 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Webpack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NewsExplorer</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+    <link rel="icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="root">
+        <header class="header">
+            <div class="header__logo">NewsExplorer</div>
+            <div class="header__controlbar">
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="" class="navigation__link">Главная</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="" class="navigation__link">Сохранённые статьи</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="header__signup">Регистрация</button>
+            </div> 
+        </header>
+        <main class="content">
+            <section class="lead">
+                <h1 class="title">Что в мире творится?</h1>
+                <h2 class="subtitle">Находите самые свежие статьи на любую тему
+                    и сохраняйте в своём личном кабинете.
+                </h2>
+                <form action="submit" class="searchbar">
+                    <input type="text" class="searchline">
+                    <input type="submit" class="submit">
+                </form>
+                <figure class="lead__image-container">
+                    <img src="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash.png').default%>" alt="" class="lead__image">
+                </figure>
+            </section>
+            <section class="about">
+                <img src="" alt="Фото автора проекта" class="photo">
+                <div class="info">
+                    <h3 class="info__title">Об авторе</h3>
+                    <p class="info__biography">Это блок с описанием автора проекта. 
+                        Здесь следует указать, как вас зовут, чем вы занимаетесь, 
+                        какими технологиями разработки владеете.</p>
+                    <p class="info__biography">Также можно рассказать о процессе обучения в Практикуме, 
+                        чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="copyright">&copy; 2020 Котелевский К. А. , Powered by News API</div>
+            <ul class="links">
+                <li class="links__item">
+                    <a href="" class="links__link">Главная</a>
+                </li>
+                <li class="links__item">
+                    <a href="" class="links__link">Яндекс.Практикум</a>
+                </li>
+                <li class="links__item">
+                    <a href="" class="links__link">
+                        <img src="" alt="" class="links__social">
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
     <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
