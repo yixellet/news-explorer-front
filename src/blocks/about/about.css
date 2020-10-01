@@ -1,0 +1,10 @@
+@import url('./__photo/about__photo.css');
+
+.about {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  padding: 80px 104px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

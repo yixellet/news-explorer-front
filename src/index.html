@@ -41,7 +41,7 @@
                 </div>
             </section>
             <section class="about">
-                <img src="" alt="Фото автора проекта" class="photo">
+                <img src="<%=require('./images/image-03.png').default%>" alt="Фото автора проекта" class="about__photo">
                 <div class="info">
                     <h3 class="info__title">Об авторе</h3>
                     <p class="info__biography">Это блок с описанием автора проекта. 
@@ -53,17 +53,22 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="copyright">&copy; 2020 Котелевский К. А. , Powered by News API</div>
-            <ul class="links">
-                <li class="links__item">
-                    <a href="" class="links__link">Главная</a>
+            <div class="footer__copyright">&copy; 2020 Котелевский К. А., Powered by News API</div>
+            <ul class="footer__links">
+                <li class="footer__links-item">
+                    <a href="" class="footer__link">Главная</a>
                 </li>
-                <li class="links__item">
-                    <a href="" class="links__link">Яндекс.Практикум</a>
+                <li class="footer__links-item">
+                    <a href="" class="footer__link">Яндекс.Практикум</a>
                 </li>
-                <li class="links__item">
-                    <a href="" class="links__link">
-                        <img src="" alt="" class="links__social">
+                <li class="footer__links-item">
+                    <a href="https://github.com/yixellet" class="footer__link" target="blank">
+                        <img src="<%=require('./images/github.svg').default%>" alt="" class="footer__links-social">
+                    </a>
+                </li>
+                <li class="footer__links-item">
+                    <a href="https://vk.com/id27152544" class="footer__link" target="blank">
+                        <img src="<%=require('./images/vk_icon_135042.svg').default%>" alt="" class="footer__links-social">
                     </a>
                 </li>
             </ul>

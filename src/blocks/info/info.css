@@ -1,0 +1,9 @@
+@import url('./__title/info__title.css');
+@import url('./__biography/info__biography.css');
+
+.info {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

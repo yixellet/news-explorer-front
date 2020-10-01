@@ -3,6 +3,9 @@
 @import url(../blocks/header/header.css);
 @import url(../blocks/lead/lead.css);
 @import url(../blocks/searchbar/searchbar.css);
+@import url(../blocks/about/about.css);
+@import url(../blocks/info/info.css);
+@import url(../blocks/footer/footer.css);
 
 .root {
   -moz-osx-font-smoothing: grayscale;
