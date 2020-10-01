@@ -28,17 +28,17 @@
         </header>
         <main class="content">
             <section class="lead">
-                <h1 class="title">Что в мире творится?</h1>
-                <h2 class="subtitle">Находите самые свежие статьи на любую тему
-                    и сохраняйте в своём личном кабинете.
-                </h2>
-                <form action="submit" class="searchbar">
-                    <input type="text" class="searchline">
-                    <input type="submit" class="submit">
-                </form>
-                <figure class="lead__image-container">
-                    <img src="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash.png').default%>" alt="" class="lead__image">
-                </figure>
+                <div class="lead__image-container"></div>
+                <div class="lead__content">
+                    <h1 class="lead__title">Что в мире творится?</h1>
+                    <h2 class="lead__subtitle">Находите самые свежие статьи на любую тему
+                        и сохраняйте в своём личном кабинете.
+                    </h2>
+                    <form action="submit" class="searchbar">
+                        <input type="text" class="searchbar__searchline" placeholder="Введите тему новости">
+                        <input type="submit" class="searchbar__submit" value="Искать">
+                    </form>
+                </div>
             </section>
             <section class="about">
                 <img src="" alt="Фото автора проекта" class="photo">

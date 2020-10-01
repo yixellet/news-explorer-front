@@ -1,0 +1,11 @@
+@import url('./__searchline/searchbar__searchline.css');
+@import url('./__submit/searchbar__submit.css');
+
+.searchbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-top: 64px;
+  width: 100%;
+  z-index: 10;
+}
