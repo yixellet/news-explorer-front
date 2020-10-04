@@ -1,0 +1,6 @@
+@import url('./_theme/_dark/header__auth-button_logout_theme_dark.css');
+@import url('./_theme/_white/header__auth-button_logout_theme_white.css');
+
+.header__auth-button_logout::after {
+  margin-left: 10px;
+}

@@ -1,0 +1,6 @@
+@import url('./_theme/_dark/navigation__text_theme_dark.css');
+@import url('./_theme/_white/navigation__text_theme_white.css');
+
+.navigation__text {
+  margin: auto;
+}

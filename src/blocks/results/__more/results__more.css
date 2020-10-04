@@ -1,0 +1,14 @@
+.results__more {
+  display: block;
+  margin: 64px auto 0;
+  background-color: #fff;
+  width: 288px;
+  height: 64px;
+  font-family: "Roboto Regular";
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 80px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

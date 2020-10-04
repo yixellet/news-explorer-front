@@ -4,27 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Находите и сохраняйте статьи на любую тему">
+    <meta name="author" content="Котелевский К. А.">
     <title>NewsExplorer</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
-    <link rel="icon" href="<%=require('./images/favicon.ico').default%>" type="image/x-icon">
+    <link rel="icon" href="<%=require('./images/favicon.svg').default%>" type="image/x-icon">
 </head>
 <body>
     <div class="root">
-        <header class="header">
-            <div class="header__logo">NewsExplorer</div>
-            <div class="header__controlbar">
-                <nav class="navigation">
+        <header class="header header_theme_white">
+            <div class="header__logo header__logo_theme_white">NewsExplorer</div>
+                <button class="header__menu-button 
+                header__menu-button_open_theme_white header__menu-button_visible"></button>
+                <nav class="navigation navigation_hide">
+                    <div class="navigation__overlay"></div>
                     <ul class="navigation__list">
-                        <li class="navigation__item navigation__item_active">
-                            <a href="" class="navigation__link">Главная</a>
+                        <li class="navigation__item navigation__item_theme_white navigation__item_active">
+                            <a href="" class="navigation__link">
+                                <p class="navigation__text navigation__text_theme_white">Главная</p>
+                            </a>
                         </li>
-                        <li class="navigation__item">
-                            <a href="" class="navigation__link">Сохранённые статьи</a>
+                        <li class="navigation__item navigation__item_theme_white">
+                            <a href="" class="navigation__link">
+                                <p class="navigation__text navigation__text_theme_white">Сохранённые статьи</p>
+                            </a>
+                        </li>
+                        <li class="navigation__item navigation__item_theme_white">
+                            <!-- 
+                            <button class="header__auth-button  
+                            header__auth-button_theme_white">Регистрация</button> -->
+                            <button class="header__auth-button header__auth-button_logout 
+                            header__auth-button_logout_theme_white 
+                            header__auth-button_theme_white">Александра</button>
                         </li>
                     </ul>
                 </nav>
-                <button class="header__button header__button_signup">Регистрация</button>
-            </div> 
         </header>
         <main class="content">
             <section class="lead">
@@ -40,10 +54,30 @@
                     </form>
                 </div>
             </section>
+            <section class="results">
+                <h3 class="title">Результаты поиска</h3>
+                <ul class="results__list">
+                    <li class="result">
+                        <img src="<%=require('./images/image_08.png').default%>" alt="" class="result__image">
+                        <div class="result__content">
+                            <p class="result__date">2 августа, 2019</p>
+                            <h4 class="result__title">Национальное достояние - парки</h4>
+                            <p class="result__text">В 2016 году Америка отмечала важный юбилей: 
+                                сто лет назад здесь начала складываться система национальных парков – 
+                                охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                            <p class="result__source">ЛЕНТА.РУ</p>
+                        </div>
+                        <div class="result__keyword">Природа</div>
+                        <button class="result__save-button result__save-button_saved"></button>
+                        <div class="result__save-tip">Войдите, чтобы сохранять статьи</div>
+                    </li>
+                </ul>
+                <button class="results__more">Показать ещё</button>
+            </section>
             <section class="about">
                 <img src="<%=require('./images/image-03.png').default%>" alt="Фото автора проекта" class="about__photo">
                 <div class="info">
-                    <h3 class="info__title">Об авторе</h3>
+                    <h3 class="title">Об авторе</h3>
                     <p class="info__biography">Это блок с описанием автора проекта. 
                         Здесь следует указать, как вас зовут, чем вы занимаетесь, 
                         какими технологиями разработки владеете.</p>
@@ -59,7 +93,7 @@
                     <a href="" class="footer__link">Главная</a>
                 </li>
                 <li class="footer__links-item">
-                    <a href="" class="footer__link">Яндекс.Практикум</a>
+                    <a href="https://praktikum.yandex.ru/" class="footer__link">Яндекс.Практикум</a>
                 </li>
                 <li class="footer__links-item">
                     <a href="https://github.com/yixellet" class="footer__link" target="blank">
@@ -74,6 +108,6 @@
             </ul>
         </footer>
     </div>
-    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+    <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>

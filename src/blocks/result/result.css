@@ -1,0 +1,18 @@
+@import url('./__content/result__content.css');
+@import url('./__image/result__image.css');
+@import url('./__date/result__date.css');
+@import url('./__title/result__title.css');
+@import url('./__text/result__text.css');
+@import url('./__source/result__source.css');
+@import url('./__save-button/result__save-button.css');
+@import url('./__save-tip/result__save-tip.css');
+@import url('./__keyword/result__keyword.css');
+
+.result {
+  list-style-type: none;
+  max-width: 400px;
+  max-height: 576px;
+  background-color: #fff;
+  border-radius: 16px;
+  position: relative;
+}

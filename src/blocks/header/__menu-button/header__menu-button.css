@@ -1,0 +1,20 @@
+@import url('./_open/header__menu-button_open.css');
+@import url('./_close/header__menu-button_close.css');
+@import url('./_visible/header__menu-button_visible.css');
+
+.header__menu-button {
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  padding: 0;
+  z-index: 30;
+}
+
+@media screen and (min-width: 701px) {
+  .header__menu-button {
+    display: none;
+  }
+}
