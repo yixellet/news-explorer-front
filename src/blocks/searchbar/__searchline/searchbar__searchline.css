@@ -3,9 +3,14 @@
   height: 64px;
   border-radius: 100px;
   padding-left: 24px;
-  padding-right: 74px;
   box-sizing: border-box;
-  font-family: "Roboto Regular";
+  font-family: "Roboto Regular", Arial, Helvetica, sans-serif;
   font-size: 16px;
   outline: none;
+}
+
+@media screen and (max-width: calc(928px)) {
+  .searchbar__searchline {
+    height: 56px;
+  }
 }

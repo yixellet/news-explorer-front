@@ -13,3 +13,18 @@
   z-index: 20;
   cursor: pointer;
 }
+
+@media screen and (max-width: calc(928px)) {
+  .searchbar__submit {
+    width: 160px;
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: calc(480px)) {
+  .searchbar__submit {
+    position: static;
+    width: 100%;
+    margin-top: 16px;
+  }
+}

@@ -7,7 +7,6 @@
     <meta name="description" content="Находите и сохраняйте статьи на любую тему">
     <meta name="author" content="Котелевский К. А.">
     <title>NewsExplorer</title>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
     <link rel="icon" href="<%=require('./images/favicon.svg').default%>" type="image/x-icon">
 </head>
 <body>
@@ -30,12 +29,12 @@
                             </a>
                         </li>
                         <li class="navigation__item navigation__item_theme_white">
-                            <!-- 
                             <button class="header__auth-button  
-                            header__auth-button_theme_white">Регистрация</button> -->
+                            header__auth-button_theme_white">Регистрация</button>
+                            <!-- 
                             <button class="header__auth-button header__auth-button_logout 
                             header__auth-button_logout_theme_white 
-                            header__auth-button_theme_white">Александра</button>
+                            header__auth-button_theme_white">Александра</button> -->
                         </li>
                     </ul>
                 </nav>
@@ -44,7 +43,7 @@
             <section class="lead">
                 <div class="lead__image-container"></div>
                 <div class="lead__content">
-                    <h1 class="lead__title">Что в мире творится?</h1>
+                    <h1 class="lead__title">Что творится в мире?</h1>
                     <h2 class="lead__subtitle">Находите самые свежие статьи на любую тему
                         и сохраняйте в своём личном кабинете.
                     </h2>
@@ -108,6 +107,18 @@
             </ul>
         </footer>
     </div>
-    <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
+    <div id="registrationPopup" class="popup">
+        <div class="popup__content">
+            <img src="./images/close-menu-button_theme_white.svg" alt="" class="popup__close">
+            <h3 class="popup__title">Регистрация</h3>
+            <form class="popup__form" name="edit">
+                <input id="username" type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" minlength="2" maxlength="30" required>
+                <span id="error-username" class="popup__error-message"> </span>
+                <input id="userinfo" type="text" name="info" class="popup__input popup__input_type_link-url" placeholder="О себе" minlength="2" maxlength="30" required>
+                <span id="error-userinfo" class="popup__error-message"> </span>
+                <button id="usersubmit" type="submit" name="submit" class="button popup__button">Сохранить</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

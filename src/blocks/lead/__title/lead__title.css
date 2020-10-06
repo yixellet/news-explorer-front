@@ -6,3 +6,11 @@
   line-height: 64px;
   color: #fff;
 }
+
+@media screen and (max-width: 928px) {
+  .lead__title {
+    font-size: 36px;
+    line-height: 40px;
+    width: 400px;
+  }
+}

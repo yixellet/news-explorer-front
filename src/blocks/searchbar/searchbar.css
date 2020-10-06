@@ -6,6 +6,20 @@
   top: 0;
   left: 0;
   margin-top: 64px;
+  margin-bottom: 80px;
   width: 100%;
   z-index: 10;
+}
+
+@media screen and (max-width: 928px) {
+  .searchbar {
+    margin-top: 48px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .searchbar {
+    margin-top: 122px;
+  }
 }

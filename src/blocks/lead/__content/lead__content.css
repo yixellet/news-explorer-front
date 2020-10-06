@@ -1,8 +1,20 @@
 .lead__content {
   max-width: 608px;
-  margin: 80px auto 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .lead__content {
+    max-width: 448px;
+  }
+}
+
+@media screen and (max-width: calc(608px + 40px + 40px)) {
+  .lead__content {
+    width: 100%;
+  }
 }
