@@ -1,4 +1,4 @@
-class Header {
+export default class Header {
   constructor(container) {
     this.container = container;
     this.menuButton = container.querySelector('.header__menu-button');
@@ -31,5 +31,3 @@ class Header {
     this.menuButton.addEventListener('click', this.showMenu);
   }
 }
-
-module.exports = { Header };

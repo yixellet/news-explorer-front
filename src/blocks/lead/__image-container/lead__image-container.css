@@ -13,13 +13,25 @@
 @media screen and (max-width: 928px) {
   .lead__image-container {
     top: -66px;
-    height: 456px;
+    height: 416px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .lead__image-container {
     top: -56px;
+    height: 528px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .lead__image-container {
     height: 552px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .lead__image-container {
+    height: 576px;
   }
 }

@@ -1,9 +1,19 @@
 .result__source {
   margin-top: 18px;
   margin-bottom: 0;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #b6bcbf;
   letter-spacing: 0.4px;
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+}
+
+@media screen and (max-width: 1300px) {
+  .result__source {
+    left: 16px;
+    bottom: 16px;
+  }
 }

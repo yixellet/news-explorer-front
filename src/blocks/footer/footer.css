@@ -2,6 +2,7 @@
 @import url('./__links/footer__links.css');
 @import url('./__links-item/footer__links-item.css');
 @import url('./__link/footer__link.css');
+@import url('./__links-list/footer__links-list.css');
 
 .footer {
   display: flex;
@@ -13,4 +14,19 @@
   margin-right: auto;
   padding-right: 104px;
   padding-left: 104px;
+}
+
+@media screen and (max-width: 928px) {
+  .footer {
+    height: 64px;
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer {
+    flex-direction: column-reverse;
+    height: auto;
+    padding: 20px 16px;
+  }
 }

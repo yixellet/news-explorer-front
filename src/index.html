@@ -54,22 +54,21 @@
                 </div>
             </section>
             <section class="results">
+                <div class="not-found">
+                    <img src="<%=require('./images/not-found_v1.svg').default%>" 
+                    alt="нет результатов" class="not-found__image">
+                    <h4 class="not-found__title">Ничего не найдено</h4>
+                    <p class="not-found__subtitle">К сожалению, по вашему запросу ничего не найдено.</p>
+                </div>
+                <div class="preloader">
+                    <i class="preloader__circle"></i>
+                    <p class="preloader__text">Идёт поиск новостей...</p>
+                </div>
+                <p class="results__error results__error_hide">Во время запроса произошла ошибка. 
+                    Возможно, проблема с соединением или сервер недоступен. 
+                    Подождите немного и попробуйте ещё раз.</p>
                 <h3 class="title">Результаты поиска</h3>
                 <ul class="results__list">
-                    <li class="result">
-                        <img src="<%=require('./images/image_08.png').default%>" alt="" class="result__image">
-                        <div class="result__content">
-                            <p class="result__date">2 августа, 2019</p>
-                            <h4 class="result__title">Национальное достояние - парки</h4>
-                            <p class="result__text">В 2016 году Америка отмечала важный юбилей: 
-                                сто лет назад здесь начала складываться система национальных парков – 
-                                охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                            <p class="result__source">ЛЕНТА.РУ</p>
-                        </div>
-                        <div class="result__keyword">Природа</div>
-                        <button class="result__save-button result__save-button_saved"></button>
-                        <div class="result__save-tip">Войдите, чтобы сохранять статьи</div>
-                    </li>
                 </ul>
                 <button class="results__more">Показать ещё</button>
             </section>
@@ -86,25 +85,29 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="footer__copyright">&copy; 2020 Котелевский К. А., Powered by News API</div>
-            <ul class="footer__links">
-                <li class="footer__links-item">
-                    <a href="" class="footer__link">Главная</a>
-                </li>
-                <li class="footer__links-item">
-                    <a href="https://praktikum.yandex.ru/" class="footer__link">Яндекс.Практикум</a>
-                </li>
-                <li class="footer__links-item">
-                    <a href="https://github.com/yixellet" class="footer__link" target="blank">
-                        <img src="<%=require('./images/github.svg').default%>" alt="" class="footer__links-social">
-                    </a>
-                </li>
-                <li class="footer__links-item">
-                    <a href="https://vk.com/id27152544" class="footer__link" target="blank">
-                        <img src="<%=require('./images/vk_icon_135042.svg').default%>" alt="" class="footer__links-social">
-                    </a>
-                </li>
-            </ul>
+            <div class="footer__copyright">&copy; 2020 Supersite, Powered by News API</div>
+            <div class="footer__links">
+                <ul class="footer__links-list">
+                    <li class="footer__links-item">
+                        <a href="" class="footer__link">Главная</a>
+                    </li>
+                    <li class="footer__links-item">
+                        <a href="https://praktikum.yandex.ru/" class="footer__link">Яндекс.Практикум</a>
+                    </li>
+                </ul>
+                <ul class="footer__links-list">
+                    <li class="footer__links-item">
+                        <a href="https://github.com/yixellet" class="footer__link" target="blank">
+                            <img src="<%=require('./images/github.svg').default%>" alt="" class="footer__links-social">
+                        </a>
+                    </li>
+                    <li class="footer__links-item">
+                        <a href="https://vk.com/id27152544" class="footer__link" target="blank">
+                            <img src="<%=require('./images/vk_icon_135042.svg').default%>" alt="" class="footer__links-social">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </footer>
     </div>
     <div id="registrationPopup" class="popup">

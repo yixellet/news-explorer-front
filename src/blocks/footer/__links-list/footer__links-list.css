@@ -1,0 +1,20 @@
+.footer__links-list {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__links-list:first-of-type {
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .footer__links-list:last-of-type {
+    width: 70px;
+    justify-content: space-between;
+  }
+}

@@ -1,6 +1,19 @@
 .about__photo {
-  max-width: 464px;
-  height: auto;
+  width: 32%;
   border-radius: 1000px;
   margin-right: 56px;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 928px) {
+  .about__photo {
+    width: 231px;
+    margin-right: 32px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about__photo {
+    margin: 0;
+  }
 }

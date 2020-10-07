@@ -1,5 +1,7 @@
 @import url('./__list/results__list.css');
+@import url('./__item/results__item.css');
 @import url('./__more/results__more.css');
+@import url('./__error/results__error.css');
 
 .results {
   max-width: 1440px;
@@ -7,4 +9,17 @@
   margin-right: auto;
   padding: 80px 104px;
   background-color: #f5f6f7;
+}
+
+@media screen and (max-width: 928px) {
+  .results {
+    width: 100vw;
+    padding: 38px 40px 48px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .results {
+    padding: 30px 16px 32px;
+  }
 }

@@ -1,0 +1,7 @@
+.result__action-button_save {
+  background-image: url('../../../../images/save-flag_normal.svg');
+}
+
+.result__action-button_save:hover {
+  background-image: url('../../../../images/save-flag_hover.svg');
+}

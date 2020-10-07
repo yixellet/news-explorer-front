@@ -10,6 +10,8 @@
 @import url(../blocks/results/results.css);
 @import url(../blocks/result/result.css);
 @import url(../blocks/popup/popup.css);
+@import url(../blocks/preloader/preloader.css);
+@import url(../blocks/not-found/not-found.css);
 
 .root {
   -moz-osx-font-smoothing: grayscale;

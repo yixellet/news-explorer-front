@@ -1,0 +1,33 @@
+.results__item {
+  list-style-type: none;
+  width: calc((100% - 32px) / 3);
+  height: 576px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+}
+
+.results__item:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1300px) {
+  .results__item {
+    width: calc((100% - 16px) / 3);
+    height: 420px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .results__item {
+    width: calc((100% - 16px) / 2);
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .results__item {
+    width: 288px;
+    height: 440px;
+  }
+}
