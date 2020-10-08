@@ -1,6 +1,5 @@
 .popup__content {
   width: 430px;
-  min-height: 458px;
   background-color: #fff;
   border-radius: 16px;
   position: relative;
@@ -9,8 +8,12 @@
   font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
   .popup__content {
     width: 100vw;
+    padding: 16px;
+    position: fixed;
+    top: 56px;
+    left: 0;
   }
 }

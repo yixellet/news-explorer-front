@@ -1,4 +1,12 @@
 .popup__button_enabled {
-  color: rgba(255, 255, 255);
-  background-color: rgb(0, 0, 0);  
+  color: #fff;
+  background-color: #2f71e5;  
+}
+
+.popup__button_enabled:hover {
+  background-color: #347eff;
+}
+
+.popup__button_enabled:active {
+  background-color: #2a65cc;
 }

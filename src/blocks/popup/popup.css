@@ -6,7 +6,9 @@
 @import url(./__button/popup__button.css);
 @import url(./__error-message/popup__error-message.css);
 @import url(./_is-opened/popup_is-opened.css);
-
+@import url(./__input-name/popup__input-name.css);
+@import url(./__text/popup__text.css);
+@import url(./__login/popup__login.css);
 
 .popup {
   position: fixed;
@@ -20,4 +22,11 @@
   justify-content: center;
   display: none;
   z-index: 30;
+}
+
+@media screen and (max-width: 430px) {
+  .popup {
+    background-color: rgba(255, 255, 255, 1);
+    top: 72px;
+  }
 }

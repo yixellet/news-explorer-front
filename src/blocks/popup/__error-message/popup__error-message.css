@@ -1,11 +1,12 @@
 @import url(./_hidden/popup__error-message_hidden.css);
+@import url('./_userexists/popup__error-message_userexists.css');
 
 .popup__error-message {
+  font-family: "inter", Arial, Helvetica, sans-serif;
   font-size: 12px;
   line-height: 14px;
   color: #FF0000;
   display: block;
-  margin: 4px 0 0 6px;
+  margin: 0 0 13px;
   box-sizing: border-box;
-  height: 25px;
 }
