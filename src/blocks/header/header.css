@@ -23,6 +23,7 @@
 
 @media screen and (max-width: 1000px) {
   .header {
+    z-index: 20;
     height: 66px;
     padding-left: 40px;
     padding-right: 40px;

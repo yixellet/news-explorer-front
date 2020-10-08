@@ -11,33 +11,33 @@
 </head>
 <body>
     <div class="root">
-        <header class="header header_theme_white">
+        <header class="header header_theme_dark">
             <div class="header__logo header__logo_theme_white">NewsExplorer</div>
-                <button class="header__menu-button 
-                header__menu-button_open_theme_white header__menu-button_visible"></button>
-                <nav class="navigation navigation_hide">
-                    <div class="navigation__overlay"></div>
-                    <ul class="navigation__list">
-                        <li class="navigation__item navigation__item_theme_white navigation__item_active">
-                            <a href="" class="navigation__link">
-                                <p class="navigation__text navigation__text_theme_white">Главная</p>
-                            </a>
-                        </li>
-                        <li class="navigation__item navigation__item_theme_white">
-                            <a href="./news.html" class="navigation__link">
-                                <p class="navigation__text navigation__text_theme_white">Сохранённые статьи</p>
-                            </a>
-                        </li>
-                        <li class="navigation__item navigation__item_theme_white">
-                            <button class="header__auth-button  
-                            header__auth-button_theme_white">Регистрация</button>
-                            <!-- 
-                            <button class="header__auth-button header__auth-button_logout 
-                            header__auth-button_logout_theme_white 
-                            header__auth-button_theme_white">Александра</button> -->
-                        </li>
-                    </ul>
-                </nav>
+            <button class="header__menu-button 
+            header__menu-button_open_theme_white header__menu-button_visible"></button>
+            <nav class="navigation navigation_hide">
+                <div class="navigation__overlay"></div>
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item_theme_white navigation__item_active">
+                        <a href="" class="navigation__link">
+                            <p class="navigation__text navigation__text_theme_white">Главная</p>
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item_theme_white">
+                        <a href="./news.html" class="navigation__link">
+                            <p class="navigation__text navigation__text_theme_white">Сохранённые статьи</p>
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item_theme_white">
+                        <button class="header__auth-button  
+                        header__auth-button_theme_white">Регистрация</button>
+                        <!-- 
+                        <button class="header__auth-button header__auth-button_logout 
+                        header__auth-button_logout_theme_white 
+                        header__auth-button_theme_white">Александра</button> -->
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main class="content">
             <section class="lead">
@@ -53,7 +53,7 @@
                     </form>
                 </div>
             </section>
-            <section class="results">
+            <section class="results results_index">
                 <div class="not-found">
                     <img src="<%=require('./images/not-found_v1.svg').default%>" 
                     alt="нет результатов" class="not-found__image">
@@ -67,10 +67,12 @@
                 <p class="results__error results__error_hide">Во время запроса произошла ошибка. 
                     Возможно, проблема с соединением или сервер недоступен. 
                     Подождите немного и попробуйте ещё раз.</p>
-                <h3 class="title">Результаты поиска</h3>
-                <ul class="results__list">
-                </ul>
-                <button class="results__more">Показать ещё</button>
+                <div class="results__block">
+                    <h3 class="title">Результаты поиска</h3>
+                    <ul class="results__list results__list_index">
+                    </ul>
+                    <button class="results__more">Показать ещё</button>
+                </div>
             </section>
             <section class="about">
                 <img src="<%=require('./images/image-03.png').default%>" alt="Фото автора проекта" class="about__photo">

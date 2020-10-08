@@ -6,6 +6,7 @@
 @import url(../blocks/results/results.css);
 @import url(../blocks/result/result.css);
 @import url(../blocks/popup/popup.css);
+@import url(../blocks/saved-info/saved-info.css);
 
 .root {
   -moz-osx-font-smoothing: grayscale;

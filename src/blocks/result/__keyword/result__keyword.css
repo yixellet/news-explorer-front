@@ -15,3 +15,10 @@
   line-height: 40px;
   margin: 0;
 }
+
+@media screen and (max-width: 1000px) {
+  .result__keyword {
+    top: 8px;
+    left: 8px;
+  }
+}

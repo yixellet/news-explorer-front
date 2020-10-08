@@ -6,7 +6,7 @@ import initialArticles from './testContent';
 
 import '../pages/index.css';
 
-const header = new Header(document.querySelector('.header'));
+const header = new Header(document.querySelector('.header'), 'white');
 header.setEventListeners();
 
 const articleList = new ArticleList(document.querySelector('.results__list'));

@@ -11,6 +11,7 @@
   border: none;
   padding: 0;
   z-index: 30;
+  fill: #0f0;
 }
 
 @media screen and (min-width: 701px) {
