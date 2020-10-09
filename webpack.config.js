@@ -73,10 +73,10 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './pages/[name].[contenthash].css',
+      filename: './[name].[contenthash].css',
     }),
     new MiniCssExtractPlugin({
-      filename: './pages/[name].[contenthash].css',
+      filename: './[name].[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       filename: 'news.html',
