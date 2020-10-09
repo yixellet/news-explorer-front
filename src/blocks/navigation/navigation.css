@@ -5,6 +5,8 @@
 @import url('./_visible/navigation_visible.css');
 @import url('./_hide/navigation_hide.css');
 @import url('./__overlay/navigation__overlay.css');
+@import url('./_theme/_dark/navigation_theme_dark.css');
+@import url('./_theme/_white/navigation_theme_white.css');
 
 .navigation{
   height: 100%;
@@ -25,7 +27,6 @@
 
 @media screen and (max-width: 700px) {
   .navigation {
-    background-color: #1a1b22;
     width: 320px;
     height: auto;
     font-size: 18px;
@@ -33,15 +34,12 @@
     top: 66px;
     right: 0;
     z-index: 15;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-bottom: 30px;
   }
 }
 
 @media screen and (max-width: 528px) {
   .navigation {
     top: 56px;
-    padding-left: 16px;
-    padding-right: 16px;
   }
 }

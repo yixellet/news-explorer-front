@@ -3,3 +3,11 @@
   height: 100%;
   text-decoration: none;
 }
+
+@media screen and (max-width: 700px) {
+  .navigation__link {
+    margin: 0;
+    width: 100%;
+    align-items: center;
+  }
+}

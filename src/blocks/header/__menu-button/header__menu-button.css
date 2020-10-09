@@ -1,6 +1,7 @@
 @import url('./_open/header__menu-button_open.css');
 @import url('./_close/header__menu-button_close.css');
 @import url('./_visible/header__menu-button_visible.css');
+@import url('./_dark/header__menu-button_dark.css');
 
 .header__menu-button {
   background-color: rgba(0, 0, 0, 0);
@@ -11,7 +12,7 @@
   border: none;
   padding: 0;
   z-index: 30;
-  fill: #0f0;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 701px) {

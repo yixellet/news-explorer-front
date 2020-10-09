@@ -4,7 +4,7 @@
 @import url('./__auth-button/header__auth-button.css');
 @import url('./_theme/_dark/header_theme_dark.css');
 @import url('./_theme/_white/header_theme_white.css');
-@import url('./_theme/_black/header_theme_black.css');
+@import url('./__background/header__background.css');
 
 .header {
   max-width: 1440px;
@@ -23,7 +23,6 @@
 
 @media screen and (max-width: 1000px) {
   .header {
-    z-index: 20;
     height: 66px;
     padding-left: 40px;
     padding-right: 40px;

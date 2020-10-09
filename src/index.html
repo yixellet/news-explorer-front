@@ -11,12 +11,12 @@
 </head>
 <body>
     <div class="root">
-        <header class="header header_theme_dark">
+        <header class="header header_theme_white">
+            <div class="header__background_black header__background header__background_hide"></div>
             <div class="header__logo header__logo_theme_white">NewsExplorer</div>
             <button class="header__menu-button 
-            header__menu-button_open_theme_white header__menu-button_visible"></button>
-            <nav class="navigation navigation_hide">
-                <div class="navigation__overlay"></div>
+            header__menu-button_open header__menu-button_visible"></button>
+            <nav class="navigation navigation_hide navigation_theme_dark">
                 <ul class="navigation__list">
                     <li class="navigation__item navigation__item_theme_white navigation__item_active">
                         <a href="" class="navigation__link">
@@ -29,15 +29,17 @@
                         </a>
                     </li>
                     <li class="navigation__item navigation__item_theme_white">
-                        <button class="header__auth-button  
-                        header__auth-button_theme_white">Регистрация</button>
                         <!-- 
+                        <button class="header__auth-button  
+                        header__auth-button_theme_white">Регистрация</button> -->
+                        
                         <button class="header__auth-button header__auth-button_logout 
                         header__auth-button_logout_theme_white 
-                        header__auth-button_theme_white">Александра</button> -->
+                        header__auth-button_theme_white">Александра</button>
                     </li>
                 </ul>
             </nav>
+            <div class="navigation__overlay navigation__overlay_hide"></div>
         </header>
         <main class="content">
             <section class="lead">
@@ -118,25 +120,25 @@
             <h3 class="popup__title">Регистрация</h3>
             <form class="popup__form" name="registration">
                 <p class="popup__input-name">Email</p>
-                <input id="email" type="email" name="email" 
+                <input id="regemail" type="email" name="email" 
                 class="popup__input popup__input_type_email" 
                 placeholder="Введите e-mail" required>
-                <span id="error-email" class="popup__error-message">Неправильный формат email</span>
+                <span id="error-regemail" class="popup__error-message">Неправильный формат email</span>
 
                 <p class="popup__input-name">Пароль</p>
-                <input id="password" type="password" name="password" 
+                <input id="regpassword" type="password" name="password" 
                 class="popup__input popup__input_type_password" 
                 placeholder="Введите пароль" required>
-                <span id="error-password" class="popup__error-message">Неправильный формат пароля</span>
+                <span id="error-regpassword" class="popup__error-message">Неправильный формат пароля</span>
 
                 <p class="popup__input-name">Имя</p>
-                <input id="username" type="text" name="username" 
+                <input id="regusername" type="text" name="username" 
                 class="popup__input popup__input_type_link-url" 
                 placeholder="Введите своё имя" minlength="2" maxlength="30" required>
-                <span id="error-username" class="popup__error-message">Неправильный формат имени</span>
+                <span id="error-regusername" class="popup__error-message">Неправильный формат имени</span>
                 
                 <span id="error-userexists" class="popup__error-message popup__error-message_userexists">Такой пользователь уже есть</span>
-                <button id="usersubmit" type="submit" name="submit" class="button popup__button popup__button_enabled">Зарегистрироваться</button>
+                <button id="regvusersubmit" type="submit" name="submit" class="button popup__button popup__button_enabled">Зарегистрироваться</button>
             </form>
             <p class="popup__text">или <span class="popup__login">Войти</span></p>
         </div>
@@ -148,20 +150,20 @@
             <h3 class="popup__title">Вход</h3>
             <form class="popup__form" name="login">
                 <p class="popup__input-name">Email</p>
-                <input id="email" type="email" name="email" 
+                <input id="logemail" type="email" name="email" 
                 class="popup__input popup__input_type_email" 
                 placeholder="Введите e-mail" required>
-                <span id="error-email" class="popup__error-message">Неправильный формат email</span>
+                <span id="error-logemail" class="popup__error-message">Неправильный формат email</span>
 
                 <p class="popup__input-name">Пароль</p>
-                <input id="password" type="password" name="password" 
+                <input id="logpassword" type="password" name="password" 
                 class="popup__input popup__input_type_password" 
                 placeholder="Введите пароль" required>
-                <span id="error-password" class="popup__error-message">Неправильный формат пароля</span>
+                <span id="error-logpassword" class="popup__error-message">Неправильный формат пароля</span>
                 
-                <span id="error-userexists" 
+                <span id="error-usernotfound" 
                 class="popup__error-message popup__error-message_userexists">Пользователь не найден</span>
-                <button id="usersubmit" type="submit" name="submit" 
+                <button id="logusersubmit" type="submit" name="submit" 
                 class="button popup__button popup__button_enabled">Войти</button>
             </form>
             <p class="popup__text">или <span class="popup__login">Зарегистрироваться</span></p>

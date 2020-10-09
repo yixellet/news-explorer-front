@@ -7,7 +7,7 @@ import initialArticles from './testContent';
 
 import '../pages/news.css';
 
-const header = new Header(document.querySelector('.header', 'dark'));
+const header = new Header(document.querySelector('.header'));
 header.setEventListeners();
 
 const savedInfo = new SavedInfo(document.querySelector('.saved-info'), 'Александра', ['природа', 'тайга', 'парки'], 56);
