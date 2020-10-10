@@ -1,6 +1,6 @@
-import Header from '../blocks/header/header';
-import ArticleList from '../blocks/results/ArticleList';
-import Article from '../blocks/result/Article';
+import Header from './components/Header';
+import ArticleList from './components/ArticleList';
+import Article from './components/Article';
 
 import initialArticles from './testContent';
 

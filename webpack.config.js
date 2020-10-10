@@ -12,7 +12,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
     index: './script/index.js',
-    news: './script/news.js',
+    articles: './script/saved-articles/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -81,7 +81,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'news.html',
       template: './news.html',
-      chunks: ['news'],
+      chunks: ['articles'],
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',

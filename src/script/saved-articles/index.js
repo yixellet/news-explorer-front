@@ -1,11 +1,11 @@
-import Header from '../blocks/header/header';
-import SavedInfo from '../blocks/saved-info/SavedInfo';
-import SavedArticle from '../blocks/result/SavedArticle';
-import ArticleList from '../blocks/results/ArticleList';
+import Header from '../components/Header';
+import SavedInfo from '../../blocks/saved-info/SavedInfo';
+import SavedArticle from '../components/SavedArticle';
+import ArticleList from '../components/ArticleList';
 
-import initialArticles from './testContent';
+import initialArticles from '../testContent';
 
-import '../pages/news.css';
+import '../../pages/news.css';
 
 const header = new Header(document.querySelector('.header'));
 header.setEventListeners();
