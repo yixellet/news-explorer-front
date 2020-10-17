@@ -1,0 +1,9 @@
+.result__content {
+  padding: 24px;
+}
+
+@media screen and (max-width: 1300px) {
+  .result__content {
+    padding: 16px;
+  }
+}

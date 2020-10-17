@@ -1,0 +1,31 @@
+@import url('./_theme/_dark/header__auth-button_theme_dark.css');
+@import url('./_theme/_white/header__auth-button_theme_white.css');
+@import url('./_logout/header__auth-button_logout.css');
+
+.header__auth-button {
+  height: 48px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  z-index: 20;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+  .header__auth-button {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header__auth-button {
+    width: 280px;
+    height: 56px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    top: 20px;
+  }
+}

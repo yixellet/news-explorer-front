@@ -1,0 +1,45 @@
+@import url('./__list/navigation__list.css');
+@import url('./__item/navigation__item.css');
+@import url('./__link/navigation__link.css');
+@import url('./__text/navigation__text.css');
+@import url('./_visible/navigation_visible.css');
+@import url('./_hide/navigation_hide.css');
+@import url('./__overlay/navigation__overlay.css');
+@import url('./_theme/_dark/navigation_theme_dark.css');
+@import url('./_theme/_white/navigation_theme_white.css');
+
+.navigation{
+  height: 100%;
+  margin: 0;
+  align-items: flex-start;
+  padding: 0;
+  font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 701px) {
+  .navigation {
+    display: flex;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navigation {
+    width: 320px;
+    height: auto;
+    font-size: 18px;
+    position: absolute;
+    top: 66px;
+    right: 0;
+    z-index: 15;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 528px) {
+  .navigation {
+    top: 56px;
+  }
+}

@@ -1,0 +1,20 @@
+@import url('./_delete/result__action-button_delete.css');
+@import url('./_save/result__action-button_save.css');
+@import url('./_saved/result__action-button_saved.css');
+
+.result__action-button {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  border-radius: 8px;
+  border: none;
+  display: block;
+  cursor: pointer;
+}
+
+.result__action-button:hover + .result__action-tip {
+  display: block;
+}

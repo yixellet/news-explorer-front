@@ -1,0 +1,12 @@
+.saved-info__title {
+  max-width: 530px;
+  line-height: 46px;
+}
+
+@media screen and (max-width: 928px) {
+  .saved-info__title {
+    max-width: 336px;
+    font-size: 30px;
+    line-height: 34px;
+  }
+}

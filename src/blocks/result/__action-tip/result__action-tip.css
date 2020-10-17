@@ -1,0 +1,13 @@
+.result__action-tip {
+  background-color: #fff;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 10px;
+  display: block;
+  font-family: "Roboto Regular", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  text-align: center;
+  line-height: 40px;
+  display: none;
+}

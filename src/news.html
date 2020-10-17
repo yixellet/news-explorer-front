@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Находите и сохраняйте статьи на любую тему">
+    <meta name="author" content="Котелевский К. А.">
+    <title>NewsExplorer. Ваши новости</title>
+    <link rel="icon" href="<%=require('./images/favicon.svg').default%>" type="image/x-icon">
+</head>
+<body>
+    <div class="root">
+        <header class="header header_theme_dark">
+            <div class="header__background_white header__background header__background_hide"></div>
+            <div class="header__logo header__logo_theme_dark">NewsExplorer</div>
+            <button class="header__menu-button 
+            header__menu-button_open header__menu-button_visible header__menu-button_dark"></button>
+            <nav class="navigation navigation_hide navigation_theme_white">
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item_theme_dark">
+                        <a href="index.html" class="navigation__link">
+                            <p class="navigation__text navigation__text_theme_dark">Главная</p>
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item_theme_dark navigation__item_active">
+                        <a href="" class="navigation__link">
+                            <p class="navigation__text navigation__text_theme_dark">Сохранённые статьи</p>
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item_theme_dark">
+                        <!-- 
+                        <button class="header__auth-button  
+                        header__auth-button_theme_dark">Регистрация</button> -->
+                        <button class="header__auth-button header__auth-button_logout 
+                        header__auth-button_logout_theme_dark 
+                        header__auth-button_theme_dark">Александра</button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="navigation__overlay navigation__overlay_hide"></div>
+        </header>
+        <main class="content">
+            <section class="saved-info">
+                <h3 class="saved-info__header">Сохранённые статьи</h3>
+                <h3 class="saved-info__title title">Грета, у вас 5 сохранённых статей</h3>
+                <p class="saved-info__subtitle">По ключевым словам: Природа, Тайга и 2-м другим</p>
+            </section>
+            <section class="results results_saved">
+                <ul class="results__list results__list_saved">
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__copyright">&copy; 2020 Supersite, Powered by News API</div>
+            <div class="footer__links">
+                <ul class="footer__links-list">
+                    <li class="footer__links-item">
+                        <a href="" class="footer__link">Главная</a>
+                    </li>
+                    <li class="footer__links-item">
+                        <a href="https://praktikum.yandex.ru/" class="footer__link">Яндекс.Практикум</a>
+                    </li>
+                </ul>
+                <ul class="footer__links-list">
+                    <li class="footer__links-item">
+                        <a href="https://github.com/yixellet" class="footer__link" target="blank">
+                            <img src="<%=require('./images/github.svg').default%>" alt="" class="footer__links-social">
+                        </a>
+                    </li>
+                    <li class="footer__links-item">
+                        <a href="https://vk.com/id27152544" class="footer__link" target="blank">
+                            <img src="<%=require('./images/vk_icon_135042.svg').default%>" alt="" class="footer__links-social">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

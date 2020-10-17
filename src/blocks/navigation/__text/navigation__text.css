@@ -1,0 +1,12 @@
+@import url('./_theme/_dark/navigation__text_theme_dark.css');
+@import url('./_theme/_white/navigation__text_theme_white.css');
+
+.navigation__text {
+  margin: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .navigation__text {
+    margin: 0 16px;
+  }
+}

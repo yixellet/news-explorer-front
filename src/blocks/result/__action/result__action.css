@@ -1,0 +1,15 @@
+.result__action {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1000px) {
+  .result__action {
+    top: 8px;
+    right: 8px;
+  }
+}

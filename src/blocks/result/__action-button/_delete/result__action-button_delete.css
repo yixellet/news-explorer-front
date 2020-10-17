@@ -1,0 +1,7 @@
+.result__action-button_delete {
+  background-image: url('../../../../images/trash.svg');
+}
+
+.result__action-button_delete:hover {
+  background-image: url('../../../../images/trash_hover.svg');
+}
