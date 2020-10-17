@@ -37,7 +37,7 @@ export default class Article {
       actionTip.textContent = 'Убрать из сохраненных';
       actionButton.classList.add('result__action-button_delete');
     }
-    article.querySelector('.result__image').getElementsByClassName.backgraundImage = `url(${this.image})`;
+    article.querySelector('.result__image').style.backgroundImage = `url(${this.image})`;
 
     this.articleContainer = article;
     this.setEventListeners();

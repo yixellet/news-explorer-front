@@ -23,7 +23,7 @@
                             <p class="navigation__text navigation__text_theme_white">Главная</p>
                         </a>
                     </li>
-                    <li class="navigation__item navigation__item_theme_white">
+                    <li id="menu_saved-news" class="navigation__item navigation__item_theme_white">
                         <a href="./news.html" class="navigation__link">
                             <p class="navigation__text navigation__text_theme_white">Сохранённые статьи</p>
                         </a>
@@ -49,8 +49,8 @@
                     <h2 class="lead__subtitle">Находите самые свежие статьи на любую тему
                         и сохраняйте в своём личном кабинете.
                     </h2>
-                    <form action="submit" class="searchbar">
-                        <input type="text" class="searchbar__searchline" placeholder="Введите тему новости" required>
+                    <form action="submit" class="searchbar" name="searchbar">
+                        <input type="text" class="searchbar__searchline" name="q" placeholder="Введите тему новости" required>
                         <input type="submit" class="searchbar__submit" value="Искать">
                     </form>
                 </div>
@@ -177,5 +177,16 @@
             <p class="popup__text"><span class="popup__login">Войти</span></p>
         </div>
     </div>
+    <template id="popup-template">
+        <div id="messagePopup" class="popup">
+        </div>
+    </template>
+    <template id="messagePopup-template">
+        <div class="popup__content">
+            <img src="./images/close-menu-button_theme_white.svg" alt="" class="popup__close">
+            <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+            <p class="popup__text"><span class="popup__login">Войти</span></p>
+        </div>
+    </template>
 </body>
 </html>

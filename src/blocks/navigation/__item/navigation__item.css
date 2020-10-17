@@ -1,6 +1,7 @@
 @import url('./_active/navigation__item_active.css');
 @import url('./_theme/_white/navigation__item_theme_white.css');
 @import url('./_theme/_dark/navigation__item_theme_dark.css');
+@import url('./_hide/navigation__item_hide.css');
 
 .navigation__item {
   list-style-type: none;
