@@ -1,5 +1,6 @@
+@import url('./_hide/results__more_hide.css');
+
 .results__more {
-  display: block;
   margin: 64px auto 0;
   background-color: #fff;
   width: 288px;

@@ -1,10 +1,11 @@
 export default class NewsApi {
-  constructor(url, apiKey, from, to, pageSize) {
+  constructor(url, apiKey, from, to, pageSize, error) {
     this.url = url;
     this.apiKey = apiKey;
     this.from = from;
     this.to = to;
     this.pageSize = pageSize;
+    this.error = error;
   }
 
   getNews(string) {
@@ -13,7 +14,7 @@ export default class NewsApi {
         if (response.ok) {
           return response.json();
         }
-        return Promise.reject(new Error('Ошибочкааааа'));
+        return this.error;
       });
   }
 }

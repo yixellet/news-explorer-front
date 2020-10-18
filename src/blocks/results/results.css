@@ -5,6 +5,7 @@
 @import url('./__block/results__block.css');
 @import url('./_saved/results_saved.css');
 @import url('./_index/results_index.css');
+@import url('./_hide/results_hide.css');
 
 .results {
   max-width: 1440px;

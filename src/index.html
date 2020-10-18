@@ -55,26 +55,7 @@
                     </form>
                 </div>
             </section>
-            <section class="results results_index">
-                <div class="not-found">
-                    <img src="<%=require('./images/not-found_v1.svg').default%>" 
-                    alt="нет результатов" class="not-found__image">
-                    <h4 class="not-found__title">Ничего не найдено</h4>
-                    <p class="not-found__subtitle">К сожалению, по вашему запросу ничего не найдено.</p>
-                </div>
-                <div class="preloader">
-                    <i class="preloader__circle"></i>
-                    <p class="preloader__text">Идёт поиск новостей...</p>
-                </div>
-                <p class="results__error">Во время запроса произошла ошибка. 
-                    Возможно, проблема с соединением или сервер недоступен. 
-                    Подождите немного и попробуйте ещё раз.</p>
-                <div class="results__block">
-                    <h3 class="title">Результаты поиска</h3>
-                    <ul class="results__list results__list_index">
-                    </ul>
-                    <button class="results__more">Показать ещё</button>
-                </div>
+            <section class="results results_index results_hide">
             </section>
             <section class="about">
                 <img src="<%=require('./images/image-03.png').default%>" alt="Фото автора проекта" class="about__photo">
