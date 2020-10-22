@@ -1,5 +1,5 @@
 export default class Article {
-  constructor(title, text, date, source, image, link, sourc) {
+  constructor(title, text, date, source, image, link, sourc, save, remove) {
     this.title = title;
     this.text = text;
     this.date = date;
@@ -7,6 +7,8 @@ export default class Article {
     this.image = image;
     this.link = link;
     this.sourc = sourc;
+    this.save = save;
+    this.remove = remove;
     this.create = this.create.bind(this);
     this.save = this.save.bind(this);
   }
@@ -42,6 +44,10 @@ export default class Article {
     this.articleContainer = article;
     this.setEventListeners();
     return article;
+  }
+
+  renderIcon() {
+
   }
 
   save(event) {

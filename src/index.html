@@ -18,24 +18,26 @@
             header__menu-button_open header__menu-button_visible"></button>
             <nav class="navigation navigation_hide navigation_theme_dark">
                 <ul class="navigation__list">
-                    <li class="navigation__item navigation__item_theme_white navigation__item_active">
+                    <li class="navigation__item navigation__item_theme_white navigation__item_active navigation__item_show">
                         <a href="" class="navigation__link">
                             <p class="navigation__text navigation__text_theme_white">Главная</p>
                         </a>
                     </li>
-                    <li id="menu_saved-news" class="navigation__item navigation__item_theme_white">
+                    <li id="menu_saved-news" class="navigation__item navigation__item_theme_white navigation__item_show">
                         <a href="./news.html" class="navigation__link">
                             <p class="navigation__text navigation__text_theme_white">Сохранённые статьи</p>
                         </a>
                     </li>
-                    <li class="navigation__item navigation__item_theme_white">
-                        <!-- 
-                        <button class="header__auth-button  
-                        header__auth-button_theme_white">Регистрация</button> -->
-                        
-                        <button class="header__auth-button header__auth-button_logout 
+                    <li id="menu_auth-button" class="navigation__item navigation__item_theme_white navigation__item_show">
+                        <button id="regButton" 
+                        class="header__auth-button 
+                        header__auth-button_theme_white">Регистрация</button>
+                        <button id="logoutButton" 
+                        class="header__auth-button 
+                        header__auth-button_hide 
+                        header__auth-button_logout 
                         header__auth-button_logout_theme_white 
-                        header__auth-button_theme_white">Александра</button>
+                        header__auth-button_theme_white"></button>
                     </li>
                 </ul>
             </nav>
@@ -95,6 +97,7 @@
             </div>
         </footer>
     </div>
+
     <div id="registrationPopup" class="popup">
         <div class="popup__content">
             <img src="./images/close-menu-button_theme_white.svg" alt="" class="popup__close">
@@ -119,7 +122,7 @@
                 <span id="error-regusername" class="popup__error-message">Неправильный формат имени</span>
                 
                 <span id="error-userexists" class="popup__error-message popup__error-message_userexists">Такой пользователь уже есть</span>
-                <button id="regvusersubmit" type="submit" name="submit" class="button popup__button popup__button_enabled">Зарегистрироваться</button>
+                <button id="regusersubmit" type="submit" name="submit" class="button popup__button popup__button_enabled">Зарегистрироваться</button>
             </form>
             <p class="popup__text">или <span class="popup__login">Войти</span></p>
         </div>
@@ -151,23 +154,12 @@
         </div>
     </div>
 
-    <div id="messagePopup" class="popup">
+    <div id="infoPopup" class="popup">
         <div class="popup__content">
             <img src="./images/close-menu-button_theme_white.svg" alt="" class="popup__close">
             <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
             <p class="popup__text"><span class="popup__login">Войти</span></p>
         </div>
     </div>
-    <template id="popup-template">
-        <div id="messagePopup" class="popup">
-        </div>
-    </template>
-    <template id="messagePopup-template">
-        <div class="popup__content">
-            <img src="./images/close-menu-button_theme_white.svg" alt="" class="popup__close">
-            <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
-            <p class="popup__text"><span class="popup__login">Войти</span></p>
-        </div>
-    </template>
 </body>
 </html>

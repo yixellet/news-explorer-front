@@ -1,4 +1,5 @@
 {
+  "enable": false,
   "extends": "airbnb-base",
   "env": {
     "browser": true

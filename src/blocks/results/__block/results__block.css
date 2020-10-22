@@ -1,5 +1,9 @@
 @import url('./_hide/results__block_hide.css');
 
 .results__block {
-  display: block;
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }

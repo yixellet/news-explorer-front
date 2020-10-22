@@ -1,26 +1,20 @@
 export default class Popup {
-  constructor(container) {
-    this.container = container;
+  constructor(popupId) {
+    this.popupElement = popupId;
     this.close = this.close.bind(this);
-  }
-
-  setContent(contentMarkup) {
-    this.container.insertAdjacentHTML('beforeend', contentMarkup);
-  }
-
-  clearContent() {
-    this.container.removeChild(this.container.firstChild);
+    this.open = this.open.bind(this);
+    this.setEventListeners();
   }
 
   open() {
-    this.closeButton = this.container.querySelector('.popup__close');
-    this.container.classList.add('popup_is-opened');
-    this.closeButton.setEventListener('click', this.close);
+    this.popupElement.classList.add('popup_is-opened');
   }
 
   close() {
-    this.closeButton = this.container.querySelector('.popup__close');
-    this.container.classList.remove('popup_is-opened');
-    this.closeButton.removeEventListener('click', this.close);
+    this.popupElement.classList.remove('popup_is-opened');
+  }
+
+  setEventListeners() {
+    this.popupElement.querySelector('.popup__close').addEventListener('click', this.close);
   }
 }

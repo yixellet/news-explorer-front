@@ -1,6 +1,7 @@
 @import url('./_theme/_dark/header__auth-button_theme_dark.css');
 @import url('./_theme/_white/header__auth-button_theme_white.css');
 @import url('./_logout/header__auth-button_logout.css');
+@import url('./_hide/header__auth-button_hide.css');
 
 .header__auth-button {
   height: 48px;

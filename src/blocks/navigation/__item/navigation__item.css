@@ -2,12 +2,12 @@
 @import url('./_theme/_white/navigation__item_theme_white.css');
 @import url('./_theme/_dark/navigation__item_theme_dark.css');
 @import url('./_hide/navigation__item_hide.css');
+@import url('./_show/navigation__item_show.css');
 
 .navigation__item {
   list-style-type: none;
   margin-left: 32px;
   height: 100%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }

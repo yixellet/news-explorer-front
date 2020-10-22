@@ -1,6 +1,6 @@
 .result__image {
   background-image: url('../../../images/image_08.png');
-  height: 47%;
+  height: 200px;
   width: 100%;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -9,12 +9,12 @@
 
 @media screen and (max-width: 1300px) {
   .result__image {
-    height: 36%;
+    height: 200px;
   }
 }
 
 @media screen and (max-width: 650px) {
   .result__image {
-    height: 40%;
+    height: 150px;
   }
 }

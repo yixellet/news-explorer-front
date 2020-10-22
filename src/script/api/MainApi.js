@@ -1,8 +1,7 @@
 export default class MainApi {
-  constructor(baseUrl, contentType, authorization, errorMessage) {
+  constructor(baseUrl, contentType, errorMessage) {
     this.baseUrl = baseUrl;
     this.errorMessage = errorMessage;
-    this.authorization = authorization;
     this.contentType = contentType;
   }
 
@@ -10,22 +9,32 @@ export default class MainApi {
     if (response.ok) {
       return response.json();
     }
-    return Promise.reject(new Error(this.errorMessage));
+    return Promise.reject(new Error(this.errorMessage.SERVER_ERROR));
   }
 
-  signup(name, email, password) {
+  signup(emailq, passwordq, nameq) {
     return fetch(`${this.baseUrl}/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': this.contentType,
       },
+      credentials: 'include',
       body: JSON.stringify({
-        name,
-        email,
-        password,
+        name: nameq,
+        email: emailq,
+        password: passwordq,
       }),
     })
-      .then(this.parseResponse);
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        const json = response.json();
+        return json.then(Promise.reject.bind(Promise));
+      })
+      .catch((err) => {
+        throw err;
+      });
   }
 
   signin(email, password) {
@@ -34,6 +43,7 @@ export default class MainApi {
       headers: {
         'Content-Type': this.contentType,
       },
+      credentials: 'include',
       body: JSON.stringify({
         email,
         password,
@@ -41,7 +51,7 @@ export default class MainApi {
     })
       .then((res) => res.json())
       .then((data) => {
-        localStorage.setItem('token', data.token);
+        localStorage.setItem('token', data.jwt);
       });
   }
 
@@ -50,10 +60,19 @@ export default class MainApi {
       method: 'GET',
       headers: {
         'Content-Type': this.contentType,
-        authorization: `Bearer ${this.authorization}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     })
-      .then(this.parseResponse);
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+      const json = response.json();
+      return json.then(Promise.reject.bind(Promise));
+    })
+    .catch((err) => {
+      throw err;
+    });
   }
 
   getArticles() {
@@ -61,7 +80,7 @@ export default class MainApi {
       method: 'GET',
       headers: {
         'Content-Type': this.contentType,
-        authorization: `Bearer ${this.authorization}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     })
       .then(this.parseResponse);
@@ -72,7 +91,7 @@ export default class MainApi {
       method: 'POST',
       headers: {
         'Content-Type': this.contentType,
-        authorization: `Bearer ${this.authorization}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
       },
       body: JSON.stringify({
         keyword,
@@ -92,7 +111,7 @@ export default class MainApi {
       method: 'DELETE',
       headers: {
         'Content-Type': this.contentType,
-        authorization: `Bearer ${this.authorization}`,
+        authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     })
       .then(this.parseResponse);
