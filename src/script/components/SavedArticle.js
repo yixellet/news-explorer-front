@@ -1,11 +1,12 @@
 import Article from './Article';
 
 export default class SavedArticle extends Article {
-  constructor(title, text, date, source, image, link, sourc, keyword) {
-    super(title, text, date, source, image, link, sourc);
-    this.keyword = keyword;
+  constructor(keyword, title, text, date, source, image, link, id, removeFromServer) {
+    super(keyword, title, text, date, source, image, link);
+    this.id = id;
+    this.removeFromServer = removeFromServer;
     this.create = this.create.bind(this);
-    this.delete = this.delete.bind(this);
+    this.remove = this.remove.bind(this);
   }
 
   create() {
@@ -14,7 +15,7 @@ export default class SavedArticle extends Article {
     article.insertAdjacentHTML('beforeend', `
     <a href=${this.link} target="blank" class="result">
       <div class="result__image"></div>
-      <div class="result__keyword">${this.keyword}</div>
+      <div class="result__keyword">${this.keyword[0].toUpperCase() + this.keyword.slice(1)}</div>
       <div class="result__content">
         <p class="result__date">${this.date}</p>
         <h4 class="result__title">${this.title}</h4>
@@ -22,32 +23,25 @@ export default class SavedArticle extends Article {
         <p class="result__source">${this.source}</p>
       </div>
       <div class="result__action">
-        <button class="result__action-button"></button>
-        <div class="result__action-tip"></div>
+        <button class="result__action-button result__action-button_delete"></button>
+        <div class="result__action-tip">Убрать из сохранённых</div>
       </div>
     </a>`);
-    const actionButton = article.querySelector('.result__action-button');
-    const actionTip = article.querySelector('.result__action-tip');
-    if (this.sourc === 'search') {
-      actionTip.textContent = 'Войдите, чтобы сохранять статьи';
-      actionButton.classList.add('result__action-button_save');
-    } else if (this.sourc === 'database') {
-      actionTip.textContent = 'Убрать из сохраненных';
-      actionButton.classList.add('result__action-button_delete');
-    }
-    article.querySelector('.result__image').getElementsByClassName.backgraundImage = `url(${this.image})`;
-
     this.articleContainer = article;
-    this.setEventListeners();
+    this.actionButton = this.articleContainer.querySelector('.result__action-button');
+    if (this.image) {
+      article.querySelector('.result__image').style.backgroundImage = `url(${this.image})`;
+    };
+    this.actionButton.addEventListener('click', this.remove);
     return article;
   }
 
-  delete(event) {
+  remove(event) {
+    this.removeFromServer(this.id)
+      .then(() => {
+        this.articleContainer.removeAttribute('uid')
+      });
     this.articleContainer.remove();
     event.preventDefault();
-  }
-
-  setEventListeners() {
-    this.articleContainer.querySelector('.result__action-button').addEventListener('click', this.delete);
   }
 }

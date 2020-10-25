@@ -2,55 +2,66 @@ import MainApi from '../api/MainApi';
 import Header from '../components/Header';
 import SavedInfo from '../components/SavedInfo';
 import SavedArticle from '../components/SavedArticle';
-import ArticleList from '../components/ArticleList';
-import mainConstants from '../constants/main-constants';
-import messages from '../constants/error-messages';
+import ArticleList from '../components/SavedArticleList';
+import mainConst from '../constants/main-constants';
+import errorMessages from '../constants/error-messages';
+import logout from '../utils/logout';
+import keywordRating from '../utils/keywordRating';
 
 import '../../pages/news.css';
-/*
-if (localStorage.getItem('token')) {
-  const mainApi = new MainApi(
-    mainConstants.BASE_URL,
-    mainConstants.CONTENT_TYPE,
-    localStorage.getItem('token'),
-    messages.SERVER_ERROR,
-  );
-} else {
-  document.location.href = 'https://owg.students.nomoreparties.co';
-}
-*/
-const mainApi = new MainApi(
-  mainConstants.BASE_URL,
-  mainConstants.CONTENT_TYPE,
-  localStorage.getItem('token'),
-  messages.SERVER_ERROR,
-);
-const header = new Header(document.querySelector('.header'));
-header.setEventListeners();
-const savedInfo = new SavedInfo(document.querySelector('.saved-info'), 'Александра', ['природа', 'тайга', 'парки'], 56);
-savedInfo.render();
-const articleList = new ArticleList(document.querySelector('.results__list'));
 
-function createNewArticle(title, text, date, source, image, link, sourc, keyword) {
-  const article = new SavedArticle(title, text, date, source, image, link, sourc, keyword);
+const articleList = new ArticleList(document.querySelector('.results'));
+const mainApi = new MainApi(
+  mainConst.BASE_URL,
+  mainConst.CONTENT_TYPE,
+  errorMessages,
+);
+
+function newsLogout() {
+  logout();
+  checkAuthorization();
+}
+function checkAuthorization() {
+  mainApi.getUserData()
+    .then((json) => {
+      const header = new Header(document.querySelector('.header'), true, newsLogout, json.data.name);
+      header.render();
+      mainApi.getArticles()
+        .then((articlesJson) => {
+          const savedInfo = new SavedInfo(document.querySelector('.saved-info'), json.data.name, keywordRating(articlesJson.data), articlesJson.data.length);
+          savedInfo.render();
+          renderArticles(articlesJson.data);
+        })
+    })
+    .catch((err) => {
+      window.location.replace('/');
+    });
+}
+function createNewArticle(keyword, title, text, dateq, source, image, link, id, removeFromServer) {
+  const article = new SavedArticle(keyword, title, text, dateq, source, image, link, id, removeFromServer);
   article.create();
   return article;
 }
-
-mainApi.getArticles().then((res) => {
-  res.forEach((article) => {
+function removeArticle(id) {
+  return mainApi.removeArticle(id);
+}
+function renderArticles(articles) {
+  articles.forEach((article) => {
     articleList.addArticle(
       createNewArticle(
+        article.keyword,
         article.title,
         article.text,
         article.date,
         article.source,
         article.image,
         article.link,
-        'database',
-        article.keyword,
+        article._id,
+        removeArticle,
       ),
     );
   });
-  articleList.render();
-});
+  articleList.renderResults();
+}
+
+checkAuthorization();

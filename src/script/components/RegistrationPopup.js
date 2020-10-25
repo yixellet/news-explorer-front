@@ -19,6 +19,14 @@ export default class RegistrationPopup extends Popup {
     super.open();
   }
 
+  openWithError() {
+    this.form.reset();
+    this.resetErrors();
+    this.form.querySelector('#error-userexists').textContent = 'Пользователь с таким email уже существует';
+    this.setEventListeners();
+    super.open();
+  }
+
   close() {
     super.close();
   }

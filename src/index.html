@@ -79,7 +79,7 @@
                         <a href="" class="footer__link">Главная</a>
                     </li>
                     <li class="footer__links-item">
-                        <a href="https://praktikum.yandex.ru/" class="footer__link">Яндекс.Практикум</a>
+                        <a href="https://praktikum.yandex.ru/" class="footer__link" target="blank">Яндекс.Практикум</a>
                     </li>
                 </ul>
                 <ul class="footer__links-list">
@@ -107,21 +107,18 @@
                 <input id="regemail" type="email" name="email" 
                 class="popup__input popup__input_type_email" 
                 placeholder="Введите e-mail" required>
-                <span id="error-regemail" class="popup__error-message">Неправильный формат email</span>
-
+                <span id="error-regemail" class="popup__error-message"> </span>
                 <p class="popup__input-name">Пароль</p>
                 <input id="regpassword" type="password" name="password" 
                 class="popup__input popup__input_type_password" 
                 placeholder="Введите пароль" required>
-                <span id="error-regpassword" class="popup__error-message">Неправильный формат пароля</span>
-
+                <span id="error-regpassword" class="popup__error-message"> </span>
                 <p class="popup__input-name">Имя</p>
                 <input id="regusername" type="text" name="username" 
                 class="popup__input popup__input_type_link-url" 
                 placeholder="Введите своё имя" minlength="2" maxlength="30" required>
-                <span id="error-regusername" class="popup__error-message">Неправильный формат имени</span>
-                
-                <span id="error-userexists" class="popup__error-message popup__error-message_userexists">Такой пользователь уже есть</span>
+                <span id="error-regusername" class="popup__error-message"> </span>
+                <span id="error-userexists" class="popup__error-message popup__error-message_userexists"></span>
                 <button id="regusersubmit" type="submit" name="submit" class="button popup__button popup__button_enabled">Зарегистрироваться</button>
             </form>
             <p class="popup__text">или <span class="popup__login">Войти</span></p>
@@ -145,8 +142,8 @@
                 placeholder="Введите пароль" required>
                 <span id="error-logpassword" class="popup__error-message">Неправильный формат пароля</span>
                 
-                <span id="error-usernotfound" 
-                class="popup__error-message popup__error-message_userexists">Пользователь не найден</span>
+                <span id="error-userexists" 
+                class="popup__error-message popup__error-message_userexists"></span>
                 <button id="logusersubmit" type="submit" name="submit" 
                 class="button popup__button popup__button_enabled">Войти</button>
             </form>

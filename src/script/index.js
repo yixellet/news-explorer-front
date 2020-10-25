@@ -57,7 +57,7 @@ function signup(email, password, name) {
       infoPopup.open();
     })
     .catch((err) => {
-      console.log(err);
+      registrationPopup.openWithError();
     });
 }
 function signin(email, password) {
@@ -65,13 +65,16 @@ function signin(email, password) {
     .then(() => {
       loginPopup.close();
       checkAuthorization();
-    });
+    })
+    .catch((err) => {
+      loginPopup.openWithError();
+    });;
 }
 function saveArticle(keyword, title, text, date, source, link, image) {
-  mainApi.createArticle(keyword, title, text, date, source, link, image);
+  return mainApi.createArticle(keyword, title, text, date, source, link, image);
 }
 function removeArticle(id) {
-  mainApi.removeArticle(id);
+  return mainApi.removeArticle(id);
 }
 function resetRegistrationErrors() {
   registrationValidator.resetErrors();
@@ -96,22 +99,25 @@ function checkAuthorization() {
       header.render();
     });
 }
-function createNewArticle(title, text, dateq, source, image, link, sourc) {
-  const article = new Article(title, text, dateq, source, image, link, sourc);
+function createNewArticle(keyword, title, text, dateq, source, image, link, saveToServer, removeFromServer) {
+  const article = new Article(keyword, title, text, dateq, source, image, link, saveToServer, removeFromServer);
   article.create();
   return article;
 }
 function renderArticles(articles) {
+  articleList.clearArray();
   articles.forEach((article) => {
     articleList.addArticle(
       createNewArticle(
+        localStorage.getItem('keyword'),
         article.title,
         article.description,
         dateForDisplay(article.publishedAt),
         article.source.name,
-        article.urlToImage,
+        article.urlToImage === null ? 'https://via.placeholder.com/300' : article.urlToImage,
         article.url,
-        'search',
+        saveArticle,
+        removeArticle,
       ),
     );
   });

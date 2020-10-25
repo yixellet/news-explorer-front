@@ -49,9 +49,18 @@ export default class MainApi {
         password,
       }),
     })
-      .then((res) => res.json())
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        const json = response.json();
+        return json.then(Promise.reject.bind(Promise));
+      })
       .then((data) => {
         localStorage.setItem('token', data.jwt);
+      })
+      .catch((err) => {
+        throw err;
       });
   }
 
@@ -83,7 +92,16 @@ export default class MainApi {
         authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     })
-      .then(this.parseResponse);
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+      const json = response.json();
+      return json.then(Promise.reject.bind(Promise));
+    })
+    .catch((err) => {
+      throw err;
+    });
   }
 
   createArticle(keyword, title, text, date, source, link, image) {
@@ -103,7 +121,16 @@ export default class MainApi {
         image,
       }),
     })
-      .then(this.parseResponse);
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+      const json = response.json();
+      return json.then(Promise.reject.bind(Promise));
+    })
+    .catch((err) => {
+      throw err;
+    });
   }
 
   removeArticle(id) {

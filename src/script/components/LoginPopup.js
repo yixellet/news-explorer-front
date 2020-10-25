@@ -19,6 +19,14 @@ export default class LoginPopup extends Popup {
     super.open();
   }
 
+  openWithError() {
+    this.form.reset();
+    this.resetErrors();
+    this.form.querySelector('#error-userexists').textContent = 'Пользователь не найден';
+    this.setEventListeners();
+    super.open();
+  }
+
   close() {
     super.close();
   }

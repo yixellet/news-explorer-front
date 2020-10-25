@@ -1,4 +1,9 @@
 export default class ArticleList {
+  /**
+   * @param {DOMElement} container - DOM-элемент
+   * для отображения результатов результатов поиска
+   * или сообщений с ними связанных
+   */
   constructor(container) {
     this.container = container;
     this.articles = [];
@@ -8,6 +13,10 @@ export default class ArticleList {
 
   addArticle(article) {
     this.articles.push(article);
+  }
+
+  clearArray() {
+    this.articles.splice(0, this.articles.length);
   }
 
   addToContainer(start, end) {

@@ -9,6 +9,7 @@ export default class SearchForm {
   submit(event) {
     event.preventDefault();
     this.search(this.form.elements.q.value);
+    localStorage.setItem('keyword', this.form.elements.q.value);
     this.form.reset();
   }
 

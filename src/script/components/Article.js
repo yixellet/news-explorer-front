@@ -1,16 +1,17 @@
 export default class Article {
-  constructor(title, text, date, source, image, link, sourc, save, remove) {
+  constructor(keyword, title, text, date, source, image, link, saveToServer, removeFromServer) {
+    this.keyword = keyword;
     this.title = title;
     this.text = text;
     this.date = date;
     this.source = source;
     this.image = image;
     this.link = link;
-    this.sourc = sourc;
-    this.save = save;
-    this.remove = remove;
+    this.saveToServer = saveToServer;
+    this.removeFromServer = removeFromServer;
     this.create = this.create.bind(this);
     this.save = this.save.bind(this);
+    this.remove = this.remove.bind(this);
   }
 
   create() {
@@ -26,37 +27,47 @@ export default class Article {
         <p class="result__source">${this.source}</p>
       </div>
       <div class="result__action">
-        <button class="result__action-button"></button>
-        <div class="result__action-tip">Подсказочка</div>
+        <button class="result__action-button result__action-button_save"></button>
+        <div class="result__action-tip"></div>
       </div>
     </a>`);
-    const actionButton = article.querySelector('.result__action-button');
-    const actionTip = article.querySelector('.result__action-tip');
-    if (this.sourc === 'search') {
-      actionTip.textContent = 'Войдите, чтобы сохранять статьи';
-      actionButton.classList.add('result__action-button_save');
-    } else if (this.sourc === 'database') {
-      actionTip.textContent = 'Убрать из сохраненных';
-      actionButton.classList.add('result__action-button_delete');
-    }
     article.querySelector('.result__image').style.backgroundImage = `url(${this.image})`;
-
     this.articleContainer = article;
-    this.setEventListeners();
+    this.actionButton = this.articleContainer.querySelector('.result__action-button');
+    this.actionTip = this.articleContainer.querySelector('.result__action-tip');
+    this.renderIcon();
     return article;
   }
 
   renderIcon() {
-
+    if (!localStorage.getItem('token')) {
+      this.actionTip.textContent = 'Войдите, чтобы сохранять статьи';
+    } else {
+      this.actionTip.textContent = 'Сохранить статью';
+      this.actionButton.addEventListener('click', this.save);
+    }
   }
 
   save(event) {
-    this.articleContainer.querySelector('.result__action-button').classList.toggle('result__action-button_save');
-    this.articleContainer.querySelector('.result__action-button').classList.toggle('result__action-button_saved');
+    this.actionButton.classList.remove('result__action-button_save');
+    this.actionButton.classList.add('result__action-button_saved');
+    this.saveToServer(this.keyword, this.title, this.text, this.date, this.source, this.link, this.image)
+      .then((res) => {
+        this.articleContainer.setAttribute('uid', res.data._id)
+      });
+      this.actionTip.textContent = 'Убрать из сохранённых';
+    this.actionButton.addEventListener('click', this.remove);
     event.preventDefault();
   }
 
-  setEventListeners() {
-    this.articleContainer.querySelector('.result__action-button').addEventListener('click', this.save);
+  remove(event) {
+    this.actionButton.classList.add('result__action-button_save');
+    this.actionButton.classList.remove('result__action-button_saved');
+    this.removeFromServer(this.articleContainer.getAttribute('uid'))
+      .then(() => {
+        this.articleContainer.removeAttribute('uid')
+      });
+    this.renderIcon();
+    event.preventDefault();
   }
 }

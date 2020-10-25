@@ -13,17 +13,22 @@ export default class FormValidator {
     field.setCustomValidity('');
 
     if (field.validity.valueMissing) {
-      field.setCustomValidity(this.errorMessages.empty);
+      field.setCustomValidity(this.errorMessages.EMPTY);
       return false;
     }
 
     if (field.validity.tooShort || field.validity.tooLong) {
-      field.setCustomValidity(this.errorMessages.wrongLength);
+      field.setCustomValidity(this.errorMessages.WRONG_LENGTH);
       return false;
     }
 
     if (field.validity.typeMismatch && field.type === 'url') {
-      field.setCustomValidity(this.errorMessages.wrongUrl);
+      field.setCustomValidity(this.errorMessages.WRONG_URL);
+      return false;
+    }
+
+    if (field.validity.typeMismatch && field.type === 'email') {
+      field.setCustomValidity(this.errorMessages.WRONG_EMAIL);
       return false;
     }
     return field.checkValidity();
