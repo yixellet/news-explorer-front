@@ -1,10 +1,10 @@
 function dateToString(date) {
-  const dateString = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+  const dateString = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
   return dateString;
 }
 
 function earlierDate(date, days) {
-  const dateString = `${date.getFullYear()}-${date.getMonth()}-${date.getDate() - days}`;
+  const dateString = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate() - days}`;
   return dateString;
 }
 

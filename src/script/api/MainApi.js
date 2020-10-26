@@ -17,8 +17,7 @@ export default class MainApi {
       method: 'POST',
       headers: {
         'Content-Type': this.contentType,
-      },     
-      credentials: 'include',
+      },
       body: JSON.stringify({
         name: nameq,
         email: emailq,
@@ -42,8 +41,7 @@ export default class MainApi {
       method: 'POST',
       headers: {
         'Content-Type': this.contentType,
-      },     
-      credentials: 'include',
+      },
       body: JSON.stringify({
         email,
         password,

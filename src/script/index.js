@@ -20,8 +20,8 @@ const currentDate = new Date();
 const newsApi = new NewsApi(
   newsConst.URL,
   newsConst.APIKEY,
-  dateToString(currentDate),
   earlierDate(currentDate, newsConst.DATEFROM),
+  dateToString(currentDate),
   newsConst.PAGESIZE,
   articleList.renderError,
 );
