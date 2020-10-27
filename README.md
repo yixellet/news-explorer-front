@@ -3,5 +3,5 @@
 
 
 
-Проект опубликован на GitHub Pages и доступен по ссылке:
-<https://yixellet.github.io/news-explorer-front/>
+Проект доступен по ссылке:
+<https://kkk.students.nomoreparties.co>
