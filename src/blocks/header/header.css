@@ -1,0 +1,43 @@
+@import url('./__logo/header__logo.css');
+@import url('./__menu-button/header__menu-button.css');
+@import url('../navigation/navigation.css');
+@import url('./__auth-button/header__auth-button.css');
+@import url('./_theme/_dark/header_theme_dark.css');
+@import url('./_theme/_white/header_theme_white.css');
+@import url('./__background/header__background.css');
+
+.header {
+  max-width: 1440px;
+  margin: auto;
+  padding-left: 104px;
+  padding-right: 104px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 30;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    height: 66px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 528px) {
+  .header {
+    height: 56px;
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: calc(480px)) {
+  .header {
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,9 @@
+.results__list_index {
+  margin-top: 64px;
+}
+
+@media screen and (max-width: 928px) {
+  .results__list_index {
+    margin-top: 32px;
+  }
+}

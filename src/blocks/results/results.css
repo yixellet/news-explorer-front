@@ -1,0 +1,28 @@
+@import url('./__list/results__list.css');
+@import url('./__item/results__item.css');
+@import url('./__more/results__more.css');
+@import url('./__error/results__error.css');
+@import url('./__block/results__block.css');
+@import url('./_saved/results_saved.css');
+@import url('./_index/results_index.css');
+@import url('./_hide/results_hide.css');
+
+.results {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f5f6f7;
+}
+
+@media screen and (max-width: 928px) {
+  .results {
+    width: 100vw;
+    padding: 38px 40px 48px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .results {
+    padding: 24px 16px;
+  }
+}

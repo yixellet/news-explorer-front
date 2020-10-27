@@ -1,0 +1,8 @@
+.popup__login {
+  color: #2f71e5;
+  cursor: pointer;
+}
+
+.popup__login:hover {
+  color: #347eff;
+}

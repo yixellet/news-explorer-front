@@ -1,0 +1,29 @@
+@import url('./_index/results__list_index.css');
+@import url('./_saved/results__list_saved.css');
+
+.results__list {
+  margin-bottom: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(224px, 400px));
+  grid-gap: 16px 16px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 928px) {
+  .results__list {
+    grid-gap: 8px 8px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .results__list {
+    grid-template-columns: repeat(2, 288px);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .results__list {
+    grid-template-columns: repeat(1, 288px);
+  }
+}

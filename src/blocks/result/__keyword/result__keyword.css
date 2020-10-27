@@ -1,0 +1,24 @@
+.result__keyword {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background-color: #fff;
+  height: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-family: "Roboto Regular", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .result__keyword {
+    top: 8px;
+    left: 8px;
+  }
+}

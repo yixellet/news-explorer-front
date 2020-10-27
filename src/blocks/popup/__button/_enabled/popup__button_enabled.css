@@ -1,0 +1,12 @@
+.popup__button_enabled {
+  color: #fff;
+  background-color: #2f71e5;  
+}
+
+.popup__button_enabled:hover {
+  background-color: #347eff;
+}
+
+.popup__button_enabled:active {
+  background-color: #2a65cc;
+}

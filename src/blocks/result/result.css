@@ -1,0 +1,21 @@
+@import url('./__content/result__content.css');
+@import url('./__image/result__image.css');
+@import url('./__date/result__date.css');
+@import url('./__title/result__title.css');
+@import url('./__text/result__text.css');
+@import url('./__source/result__source.css');
+@import url('./__action-button/result__action-button.css');
+@import url('./__action-tip/result__action-tip.css');
+@import url('./__keyword/result__keyword.css');
+@import url('./__action/result__action.css');
+
+.result {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  border-radius: 16px;
+}

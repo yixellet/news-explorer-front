@@ -1,0 +1,9 @@
+@media screen and (max-width: 700px) {
+  .header__menu-button_visible {
+    display: block;
+  }
+
+  .header__menu-button_hide {
+    display: none;
+  }
+}
